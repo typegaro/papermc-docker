@@ -12,7 +12,7 @@ MC_VERSION="${MC_VERSION,,}"
 PAPER_BUILD="${PAPER_BUILD,,}"
 
 # Get version information and build download URL and jar name
-URL='https://papermc.io/api/v2/projects/paper'
+URL='https://api.papermc.io/v2/projects/paper'
 if [[ $MC_VERSION == latest ]]
 then
   # Get the latest MC version
@@ -33,7 +33,7 @@ then
   # Remove old server jar(s)
   rm -f *.jar
   # Download new server jar
-  wget "$URL" -O "$JAR_NAME"
+  wget "$URL" 
 fi
 
 # Update eula.txt with current setting
