@@ -42,7 +42,7 @@ echo "eula=${EULA:-false}" > eula.txt
 # Add RAM options to Java options if necessary
 if [[ -n $MC_RAM ]]
 then
-  JAVA_OPTS="-Xms${MC_RAM} -Xmx${MC_RAM} $JAVA_OPTS"
+  JAVA_OPTS="-Xms1G -Xmx${MC_RAM} $JAVA_OPTS"
 fi
 
 # Start server
